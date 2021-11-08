@@ -1,4 +1,3 @@
-
 <?php
 
 /*
@@ -14,32 +13,32 @@
 
 
 echo "ЗД 1 <br>";
-$arr=['a', 'b', 'c'];
-var_dump($arr);
-echo "<br>";
+$arr = ['a', 'b', 'c'];
+// var_dump($arr); по заданию необходимо было использовать для вывода на экран эту функцию, но я могу так:
+foreach ($arr as $number) {
+	echo $number . "<br>\r\n";
+}
 
 echo "ЗД 2 <br>";
 echo "первый элемент: $arr[0], второй элемнт: $arr[1], третий элемент $arr[2] <br>";
 
 echo "ЗД 3 <br>";
-$arr=['a', 'b', 'c', 'd'];
-echo $arr[0].'+'.$arr[1].', '.$arr[2].'+'.$arr[3].'<br>';
+$arr = ['a', 'b', 'c', 'd'];
+echo $arr[0] . '+' . $arr[1] . ', ' . $arr[2] . '+' . $arr[3] . '<br>';
 
 echo "ЗД 4 <br>";
-$arr=[2, 5, 3, 9];
+$arr = [2, 5, 3, 9];
 $result = $arr[0] * $arr[1] + $arr[2] * $arr[3];
 echo $result;
 echo "<br>";
 
 echo "ЗД 5 <br>";
 echo "вариант 1 <br>";
-$array[] = 1;
-$array[] = 2;
-$array[] = 3;
-$array[] = 4;
-$array[] = 5;
-var_dump($array);
-echo "<br>";
+for ($numb=1; $numb <=5 ; $numb++) {
+	$array[] = $numb;
+}
+foreach ($array as $numb) {
+	echo $numb . "<br>\r\n";
+}
 echo "вариант 2 <br>";
 var_dump(range(1, 5));
-?>
